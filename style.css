@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu';
+  font-weight: 600;
+  font-size: 12px;
+}
+
+body {
+  background-color: #eaeaea;
+  overflow: hidden;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 0 360px;
+  border: 1px solid black;
+  border-radius: 10px;
+  outline: none;
+}
+
+button:hover {
+  transform: scale(0.9);
+  cursor: pointer;
+}
+
+/* table styling  */
+
+.styled-table {
+  border-spacing: 0;
+  text-align: center;
+  margin: 25px auto;
+  font-size: 0.9em;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+  border-radius: 20px;
+}
+
+.styled-table thead tr {
+  background-color: #f6f6f6;
+  color: #000;
+  text-align: center;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:hover {
+  transform: scale3d(1, 1.05, 1);
+  cursor: pointer;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:nth-of-type(odd) {
+  background-color: #eaeaea;
+}
+
+.styled-table thead tr td:first-of-type {
+  border-radius: 10px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.styled-table thead tr td:last-of-type {
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.styled-table tfoot tr td:last-of-type {
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.styled-table tfoot tr td:first-of-type {
+  border-radius: 10px;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.styled-table tfoot tr {
+  background-color: #f6f6f6;
+  color: #000;
+  border-radius: 10px;
+}
+
+/* colours for subject points  */
+
+.point__high {
+  background-color: #2ec1ac;
+
+  color: white;
+}
+
+.point__low {
+  background-color: #e40017;
+  color: #fff;
+}
