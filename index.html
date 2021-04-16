@@ -8,14 +8,22 @@
     <title>LVL1</title>
   </head>
   <body>
+    <div class='inpts'>
+     <form class='form_fld' action="#"></form>
+    <input type="text" name="name" id="name_inp" placeholder="Name" />
+    <input type="text" name="surn" id="surn_inp"placeholder="Surname" />
+    <input type="text" name="html" id="html" placeholder="Html Point"/>
+    <input type="text" name="css" id="css_inp" placeholder="Css Point"/>
+    <input type="text" name="js" id="js" placeholder="Javascript Point"/>
+    <button class='btn'type="submit">Add</button>
+    </form>
+    </div>
+    <div>
     <table class="styled-table">
       <thead>
-        <tr>
+        <tr class="head-data">
           <td>Name</td>
           <td>Surname</td>
-          <td>Html Point</td>
-          <td>CSS Point</td>
-          <td>Javascript Point</td>
         </tr>
       </thead>
       <tbody>
@@ -36,6 +44,7 @@
         </tr>
       </tfoot>
     </table>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
