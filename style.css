@@ -133,3 +133,9 @@ button {
 input:focus {
   outline: none;
 }
+
+.subject_area {
+  position: absolute;
+  top: 300px;
+  left: 20px;
+}

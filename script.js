@@ -5,7 +5,7 @@ const users = [
   {
     name: 'Ricky',
     surname: 'Martin',
-    points: [83, 75, 96],
+    points: [83, 75, 96, 55],
   },
 
   {
@@ -50,6 +50,16 @@ const avgJs = document.querySelector('.avg-js');
 const html = document.querySelector('.html');
 const head = document.querySelector('.head-data');
 const btn = document.querySelector('.btn');
+
+const subBtn = document.querySelector('.sb-btn');
+const subInpt = document.getElementById('sbj_inp');
+
+const name_inp = document.getElementById('name_inp');
+const surname = document.getElementById('surn_inp');
+const css_inp = document.getElementById('css_inp');
+const html_inp = document.getElementById('html');
+const js = document.getElementById('js');
+
 const subject = ['Html Point', 'CSS Point', 'Javascript Point'];
 
 //head field.
@@ -79,21 +89,13 @@ let javascriptAverage =
 
 ///
 
-////
-
-const name = document.getElementById('name_inp');
-const surname = document.getElementById('surn_inp');
-const css_inp = document.getElementById('css_inp');
-const html_inp = document.getElementById('html');
-const js = document.getElementById('js');
-
 //event listener.
 
 btn.addEventListener('click', function () {
   users.push({
     name: name_inp.value,
     surname: surn_inp.value,
-    scores: [html_inp.value, css_inp.value, js.value],
+    points: [html_inp.value, css_inp.value, js.value],
   });
 
   const htmlScores = html_inp.value >= htmlAverage ? 'high' : 'low';
@@ -109,9 +111,56 @@ btn.addEventListener('click', function () {
     </tr>`;
 
   data.insertAdjacentHTML('beforebegin', html);
+
+  //average update.
+
+  //html
+  avgHtml.textContent = (
+    (htmlAverage * (users.length - 1) + Number(html_inp.value)) /
+    users.length
+  ).toFixed(2);
+  htmlAverage =
+    (htmlAverage * (users.length - 1) + Number(html_inp.value)) / users.length;
+
+  //css.
+  avgCss.textContent = (
+    (cssAverage * (users.length - 1) + Number(css_inp.value)) /
+    users.length
+  ).toFixed(2);
+  cssAverage =
+    (cssAverage * (users.length - 1) + Number(css_inp.value)) / users.length;
+
+  //js
+  avgJs.textContent = (
+    (javascriptAverage * (users.length - 1) + Number(js.value)) /
+    users.length
+  ).toFixed(2);
+  javascriptAverage =
+    (javascriptAverage * (users.length - 1) + Number(js.value)) / users.length;
+
+  //input clearing..
+  name_inp.value = '';
+  surname.value = '';
+  css_inp.value = '';
+  html_inp.value = '';
+  js.value = '';
+});
+
+//subject adding..
+
+subBtn.addEventListener('click', function () {
+  subject.push(subInpt.value);
+
+  let sub = '';
+  sub += `<td>${subInpt.value}</td>`;
+  head.innerHTML += sub;
+
+  subInpt.value = '';
 });
 
 ////
+
+//display datas..
 
 users.forEach(function (user, index) {
   data.innerHTML = '';
@@ -136,3 +185,5 @@ users.forEach(function (user, index) {
 avgHtml.textContent = htmlAverage.toFixed(2);
 avgCss.textContent = cssAverage.toFixed(2);
 avgJs.textContent = javascriptAverage.toFixed(2);
+
+/////////////////
