@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-weight: 600;
   font-size: 12px;
 }
@@ -21,7 +21,7 @@ button:hover {
   cursor: pointer;
 }
 
-/* table styling  */
+/* table styling */
 
 .styled-table {
   border-spacing: 0;
