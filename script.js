@@ -19,46 +19,178 @@ const css_inp = document.getElementById("css_inp");
 const html_inp = document.getElementById("html");
 const js = document.getElementById("js");
 
-const subject = ["Html Point", "CSS Point", "Javascript Point"];
+///USERS.
+const users = [
+  {
+    name: "Ricky",
+    surname: "Martin",
+    points: [83, 75, 96, 55],
+  },
 
-class Person {
+  {
+    name: "David",
+    surname: "Benioff",
+    points: [74, 87, 69],
+  },
+
+  {
+    name: "George",
+    surname: "Martin",
+    points: [87, 93, 91],
+  },
+
+  {
+    name: "Daniel",
+    surname: "Weiss",
+    points: [56, 83, 75],
+  },
+
+  {
+    name: "Walter",
+    surname: "White",
+    points: [52, 68, 86],
+  },
+
+  {
+    name: "Jesse",
+    surname: "Pinkman",
+    points: [67, 51, 70],
+  },
+];
+
+class Students {
   constructor(name, surname, points) {
     this.name = name;
     this.surname = surname;
     this.points = points;
   }
+}
 
-  hey() {
-    console.log(`Hey ${this.name}`);
+const subjects = ["Html Point", "CSS Point", "Javascript Point"];
+
+class fullTable {
+  users = [];
+  subjects = [];
+  constructor(user, subjects) {
+    this.user = user;
+    this.subjects = subjects;
+    this.StudentEventListener();
+    this.subEventListener();
+    this.displayData();
+    this.headField();
+  }
+
+  headField() {
+    //head field.
+    let sub = "";
+    for (let i = 0; i < this.subjects.length; i++) {
+      sub += `<td>${this.subjects[i]}</td>`;
+    }
+    head.innerHTML += sub;
+  }
+
+  displayData() {
+    //display datas..
+    console.log(users);
+    users.forEach(function (user, index) {
+      data.innerHTML = "";
+
+      const html = `<tr class="new-data">
+      <td class="name">${user.name}</td>
+      <td class="surname">${user.surname}</td>
+      <td class="html point__${
+        user.points[0] >= htmlAverage ? "high" : "low"
+      }">${user.points[0]}</td>
+      <td class="css point__${user.points[1] >= cssAverage ? "high" : "low"}">${
+        user.points[1]
+      }</td>
+      <td class="javascript point__${
+        user.points[2] >= javascriptAverage ? "high" : "low"
+      }">${user.points[2]}</td>
+    </tr>`;
+
+      data.insertAdjacentHTML("beforebegin", html);
+    });
+  }
+
+  StudentEventListener() {
+    //event listener.
+
+    btn.addEventListener("click", function () {
+      users.push({
+        name: name_inp.value,
+        surname: surn_inp.value,
+        points: [html_inp.value, css_inp.value, js.value],
+      });
+
+      const htmlScores = html_inp.value >= htmlAverage ? "high" : "low";
+      const cssScores = css_inp.value >= cssAverage ? "high" : "low";
+      const jsScores = js.value >= javascriptAverage ? "high" : "low";
+
+      const html = `<tr class="new-data">
+      <td class="name">${name_inp.value}</td>
+      <td class="surname">${surn_inp.value}</td>
+      <td class="html point__${htmlScores}">${html_inp.value}</td>
+      <td class="css point__${cssScores}">${css_inp.value}</td>
+      <td class="javascript point__${jsScores}">${js.value}</td>
+    </tr>`;
+
+      data.insertAdjacentHTML("beforebegin", html);
+
+      //average update.
+
+      //html
+      avgHtml.textContent = (
+        (htmlAverage * (users.length - 1) + Number(html_inp.value)) /
+        users.length
+      ).toFixed(2);
+      htmlAverage =
+        (htmlAverage * (users.length - 1) + Number(html_inp.value)) /
+        users.length;
+
+      //css.
+      avgCss.textContent = (
+        (cssAverage * (users.length - 1) + Number(css_inp.value)) /
+        users.length
+      ).toFixed(2);
+      cssAverage =
+        (cssAverage * (users.length - 1) + Number(css_inp.value)) /
+        users.length;
+
+      //js
+      avgJs.textContent = (
+        (javascriptAverage * (users.length - 1) + Number(js.value)) /
+        users.length
+      ).toFixed(2);
+      javascriptAverage =
+        (javascriptAverage * (users.length - 1) + Number(js.value)) /
+        users.length;
+
+      //input clearing..
+      name_inp.value = "";
+      surname.value = "";
+      css_inp.value = "";
+      html_inp.value = "";
+      js.value = "";
+    });
+  }
+
+  subEventListener() {
+    subBtn.addEventListener("click", function () {
+      subjects.push(subInpt.value);
+
+      let sub = "";
+      sub += `<td>${subInpt.value}</td>`;
+      head.innerHTML += sub;
+
+      subInpt.value = "";
+    });
   }
 }
-let user1, user2, user3, user4, user5, user6;
-
-///USERS.
-const users = [
-  (user1 = new Person("Ricky", "Martin", [83, 75, 96, 55])),
-  (user2 = new Person("George", "Martin", [87, 93, 91])),
-  (user3 = new Person("Daniel", "Weiss", [56, 83, 75])),
-  (user4 = new Person("Walter", "White", [52, 68, 86])),
-  (user5 = new Person("Jesse", "Pinkman", [67, 51, 70])),
-  (user6 = new Person("David", "Benioff", [74, 87, 69])),
-];
-
-//head field.
-let sub = "";
-for (let i = 0; i < subject.length; i++) {
-  sub += `<td>${subject[i]}</td>`;
-}
-head.innerHTML += sub;
-
-///
-
-//average points..
 
 let htmlAverage =
   users.map((user) => user.points[0]).reduce((acc, point) => acc + point, 0) /
   users.length;
-console.log(users);
 
 let cssAverage =
   users.map((user) => user.points[1]).reduce((acc, point) => acc + point, 0) /
@@ -71,101 +203,11 @@ let javascriptAverage =
 
 ///
 
-//event listener.
-
-btn.addEventListener("click", function () {
-  users.push({
-    name: name_inp.value,
-    surname: surn_inp.value,
-    points: [html_inp.value, css_inp.value, js.value],
-  });
-
-  const htmlScores = html_inp.value >= htmlAverage ? "high" : "low";
-  const cssScores = css_inp.value >= cssAverage ? "high" : "low";
-  const jsScores = js.value >= javascriptAverage ? "high" : "low";
-
-  const html = `<tr class="new-data">
-      <td class="name">${name_inp.value}</td>
-      <td class="surname">${surn_inp.value}</td>
-      <td class="html point__${htmlScores}">${html_inp.value}</td>
-      <td class="css point__${cssScores}">${css_inp.value}</td>
-      <td class="javascript point__${jsScores}">${js.value}</td>
-    </tr>`;
-
-  data.insertAdjacentHTML("beforebegin", html);
-
-  //average update.
-
-  //html
-  avgHtml.textContent = (
-    (htmlAverage * (users.length - 1) + Number(html_inp.value)) /
-    users.length
-  ).toFixed(2);
-  htmlAverage =
-    (htmlAverage * (users.length - 1) + Number(html_inp.value)) / users.length;
-
-  //css.
-  avgCss.textContent = (
-    (cssAverage * (users.length - 1) + Number(css_inp.value)) /
-    users.length
-  ).toFixed(2);
-  cssAverage =
-    (cssAverage * (users.length - 1) + Number(css_inp.value)) / users.length;
-
-  //js
-  avgJs.textContent = (
-    (javascriptAverage * (users.length - 1) + Number(js.value)) /
-    users.length
-  ).toFixed(2);
-  javascriptAverage =
-    (javascriptAverage * (users.length - 1) + Number(js.value)) / users.length;
-
-  //input clearing..
-  name_inp.value = "";
-  surname.value = "";
-  css_inp.value = "";
-  html_inp.value = "";
-  js.value = "";
-});
-
-//subject adding..
-
-subBtn.addEventListener("click", function () {
-  subject.push(subInpt.value);
-
-  let sub = "";
-  sub += `<td>${subInpt.value}</td>`;
-  head.innerHTML += sub;
-
-  subInpt.value = "";
-});
-
 ////
-
-//display datas..
-
-users.forEach(function (user, index) {
-  data.innerHTML = "";
-
-  const html = `<tr class="new-data">
-      <td class="name">${user.name}</td>
-      <td class="surname">${user.surname}</td>
-      <td class="html point__${
-        user.points[0] >= htmlAverage ? "high" : "low"
-      }">${user.points[0]}</td>
-      <td class="css point__${user.points[1] >= cssAverage ? "high" : "low"}">${
-    user.points[1]
-  }</td>
-      <td class="javascript point__${
-        user.points[2] >= javascriptAverage ? "high" : "low"
-      }">${user.points[2]}</td>
-    </tr>`;
-
-  data.insertAdjacentHTML("beforebegin", html);
-});
 
 avgHtml.textContent = htmlAverage.toFixed(2);
 avgCss.textContent = cssAverage.toFixed(2);
 avgJs.textContent = javascriptAverage.toFixed(2);
 
 /////////////////
+new fullTable(users, subjects);
