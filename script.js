@@ -58,14 +58,6 @@ const users = [
   },
 ];
 
-class Students {
-  constructor(name, surname, points) {
-    this.name = name;
-    this.surname = surname;
-    this.points = points;
-  }
-}
-
 const subjects = ["Html Point", "CSS Point", "Javascript Point"];
 
 class fullTable {
