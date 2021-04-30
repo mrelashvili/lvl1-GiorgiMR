@@ -63,6 +63,19 @@ const subjects = ["Html Point", "CSS Point", "Javascript Point"];
 class fullTable {
   users = [];
   subjects = [];
+  htmlAverage =
+    users.map((user) => user.points[0]).reduce((acc, point) => acc + point, 0) /
+    users.length;
+
+  cssAverage =
+    users.map((user) => user.points[1]).reduce((acc, point) => acc + point, 0) /
+    users.length;
+
+  javascriptAverage =
+    users
+      .map((user) => user.points[2])
+      .reduce((acc, point) => Math.floor(acc + point, 0)) / users.length;
+
   constructor(user, subjects) {
     this.user = user;
     this.subjects = subjects;
@@ -70,6 +83,26 @@ class fullTable {
     this.subEventListener();
     this.displayData();
     this.headField();
+    this.htmlAverage =
+      users
+        .map((user) => user.points[0])
+        .reduce((acc, point) => acc + point, 0) / users.length;
+    this.cssAverage =
+      users
+        .map((user) => user.points[1])
+        .reduce((acc, point) => acc + point, 0) / users.length;
+
+    this.javascriptAverage =
+      users
+        .map((user) => user.points[2])
+        .reduce((acc, point) => Math.floor(acc + point, 0)) / users.length;
+    this.avgUpdt();
+  }
+
+  avgUpdt() {
+    avgHtml.textContent = this.htmlAverage.toFixed(2);
+    avgCss.textContent = this.cssAverage.toFixed(2);
+    avgJs.textContent = this.javascriptAverage.toFixed(2);
   }
 
   headField() {
@@ -82,8 +115,9 @@ class fullTable {
   }
 
   displayData() {
+    let self = this;
     //display datas..
-    console.log(users);
+
     users.forEach(function (user, index) {
       data.innerHTML = "";
 
@@ -91,13 +125,13 @@ class fullTable {
       <td class="name">${user.name}</td>
       <td class="surname">${user.surname}</td>
       <td class="html point__${
-        user.points[0] >= htmlAverage ? "high" : "low"
+        user.points[0] >= self.htmlAverage ? "high" : "low"
       }">${user.points[0]}</td>
-      <td class="css point__${user.points[1] >= cssAverage ? "high" : "low"}">${
-        user.points[1]
-      }</td>
+      <td class="css point__${
+        user.points[1] >= self.cssAverage ? "high" : "low"
+      }">${user.points[1]}</td>
       <td class="javascript point__${
-        user.points[2] >= javascriptAverage ? "high" : "low"
+        user.points[2] >= self.javascriptAverage ? "high" : "low"
       }">${user.points[2]}</td>
     </tr>`;
 
@@ -106,6 +140,7 @@ class fullTable {
   }
 
   StudentEventListener() {
+    let self = this;
     //event listener.
 
     btn.addEventListener("click", function () {
@@ -115,9 +150,9 @@ class fullTable {
         points: [html_inp.value, css_inp.value, js.value],
       });
 
-      const htmlScores = html_inp.value >= htmlAverage ? "high" : "low";
-      const cssScores = css_inp.value >= cssAverage ? "high" : "low";
-      const jsScores = js.value >= javascriptAverage ? "high" : "low";
+      const htmlScores = html_inp.value >= self.htmlAverage ? "high" : "low";
+      const cssScores = css_inp.value >= self.cssAverage ? "high" : "low";
+      const jsScores = js.value >= self.javascriptAverage ? "high" : "low";
 
       const html = `<tr class="new-data">
       <td class="name">${name_inp.value}</td>
@@ -133,29 +168,29 @@ class fullTable {
 
       //html
       avgHtml.textContent = (
-        (htmlAverage * (users.length - 1) + Number(html_inp.value)) /
+        (self.htmlAverage * (users.length - 1) + Number(html_inp.value)) /
         users.length
       ).toFixed(2);
-      htmlAverage =
-        (htmlAverage * (users.length - 1) + Number(html_inp.value)) /
+      self.htmlAverage =
+        (self.htmlAverage * (users.length - 1) + Number(html_inp.value)) /
         users.length;
 
       //css.
       avgCss.textContent = (
-        (cssAverage * (users.length - 1) + Number(css_inp.value)) /
+        (self.cssAverage * (users.length - 1) + Number(css_inp.value)) /
         users.length
       ).toFixed(2);
-      cssAverage =
-        (cssAverage * (users.length - 1) + Number(css_inp.value)) /
+      self.cssAverage =
+        (self.cssAverage * (users.length - 1) + Number(css_inp.value)) /
         users.length;
 
       //js
       avgJs.textContent = (
-        (javascriptAverage * (users.length - 1) + Number(js.value)) /
+        (self.javascriptAverage * (users.length - 1) + Number(js.value)) /
         users.length
       ).toFixed(2);
-      javascriptAverage =
-        (javascriptAverage * (users.length - 1) + Number(js.value)) /
+      self.javascriptAverage =
+        (self.javascriptAverage * (users.length - 1) + Number(js.value)) /
         users.length;
 
       //input clearing..
@@ -180,26 +215,4 @@ class fullTable {
   }
 }
 
-let htmlAverage =
-  users.map((user) => user.points[0]).reduce((acc, point) => acc + point, 0) /
-  users.length;
-
-let cssAverage =
-  users.map((user) => user.points[1]).reduce((acc, point) => acc + point, 0) /
-  users.length;
-
-let javascriptAverage =
-  users
-    .map((user) => user.points[2])
-    .reduce((acc, point) => Math.floor(acc + point, 0)) / users.length;
-
-///
-
-////
-
-avgHtml.textContent = htmlAverage.toFixed(2);
-avgCss.textContent = cssAverage.toFixed(2);
-avgJs.textContent = javascriptAverage.toFixed(2);
-
-/////////////////
 new fullTable(users, subjects);
