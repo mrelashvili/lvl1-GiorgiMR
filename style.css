@@ -1,141 +1,85 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
-
 * {
   margin: 0;
   padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
   box-sizing: border-box;
-  font-family: "Ubuntu";
-  font-weight: 600;
-  font-size: 12px;
 }
 
 body {
-  background-color: #eaeaea;
-  overflow: hidden;
+  font-family: system-ui;
+  color: #555;
+  background-color: #f7f7f7;
+  min-height: 100vh;
+
   display: flex;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
 }
 
-button:hover {
-  transform: scale(0.9);
-  cursor: pointer;
-}
-
-/* table styling */
-
-.styled-table {
-  border-spacing: 0;
-  text-align: center;
-  margin: 25px 100px;
-  font-size: 0.9em;
-  min-width: 400px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
-  border-radius: 20px;
-}
-
-.styled-table thead tr {
-  background-color: #f6f6f6;
-  color: #000;
-  text-align: center;
-}
-
-.styled-table th,
-.styled-table td {
-  padding: 12px 15px;
-}
-
-.styled-table tbody tr {
-  border-bottom: 1px solid #dddddd;
-}
-
-.styled-table tbody tr:hover {
-  transform: scale3d(1, 1.05, 1);
-  cursor: pointer;
-}
-
-.styled-table tbody tr:nth-of-type(even) {
-  background-color: #f3f3f3;
-}
-
-.styled-table tbody tr:nth-of-type(odd) {
-  background-color: #eaeaea;
-}
-
-.styled-table thead tr td:first-of-type {
-  border-radius: 10px;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
-  border-bottom-left-radius: 0px;
-}
-
-.styled-table thead tr td:last-of-type {
-  border-radius: 10px;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-}
-
-.styled-table tfoot tr td:last-of-type {
-  border-radius: 10px;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  border-bottom-left-radius: 0px;
-}
-
-.styled-table tfoot tr td:first-of-type {
-  border-radius: 10px;
-  border-top-right-radius: 0px;
-  border-top-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-}
-
-.styled-table tfoot tr {
-  background-color: #f6f6f6;
-  color: #000;
-  border-radius: 10px;
-}
-
-/* colours for subject points  */
-
-.point__high {
-  background-color: #2ec1ac;
-
-  color: white;
-}
-
-.point__low {
-  background-color: #e40017;
-  color: #fff;
-}
-
-input {
+.container {
   display: flex;
-  margin: 8px;
-  padding: 10px;
-  border-radius: 10px;
-  border: none;
+  flex-flow: column;
+  align-items: center;
 }
 
-.inpts {
-  margin: 20px;
-}
-
-button {
+.countries {
+  /* margin-bottom: 8rem; */
   display: flex;
-  padding: 10px;
-  margin: 8px;
-  width: 40%;
-  border: 1px solid black;
-  border-radius: 10px;
-  outline: none;
+
+  font-size: 2rem;
+  opacity: 0;
+  transition: opacity 1s;
 }
 
-input:focus {
-  outline: none;
+.display {
+  background-color: #fff;
+  box-shadow: 0 2rem 5rem 1rem rgba(0, 0, 0, 0.1);
+  font-size: 1.8rem;
+  width: 30rem;
+  border-radius: 0.7rem;
+  margin: 0 3rem;
+  /* overflow: hidden; */
 }
 
-.subject_area {
-  position: absolute;
-  top: 300px;
-  left: 20px;
+.song__img {
+  width: 30rem;
+  height: 17rem;
+  object-fit: cover;
+  background-color: #eee;
+  border-top-left-radius: 0.7rem;
+  border-top-right-radius: 0.7rem;
+}
+
+.song__data {
+  padding: 2.5rem 3.75rem 3rem 3.75rem;
+}
+
+.song__name {
+  font-size: 2.7rem;
+  margin-bottom: 0.7rem;
+}
+
+.artist__name {
+  font-size: 1.4rem;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+  color: #888;
+}
+
+.row span {
+  display: inline-block;
+  margin-right: 2rem;
+  font-size: 2.4rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
 }
