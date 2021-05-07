@@ -1,85 +1,63 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
-}
-
-html {
-  font-size: 62.5%;
   box-sizing: border-box;
+  font-family: 'Ubuntu';
+  font-weight: 600;
+  font-size: 12px;
 }
 
 body {
-  font-family: system-ui;
-  color: #555;
-  background-color: #f7f7f7;
-  min-height: 100vh;
+  background-color: #eaeaea;
 
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
-.container {
+button:hover {
+  transform: scale(0.9);
+  cursor: pointer;
+}
+
+input {
   display: flex;
-  flex-flow: column;
-  align-items: center;
+  margin: 8px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
 }
 
-.countries {
-  /* margin-bottom: 8rem; */
+article {
   display: flex;
-
-  font-size: 2rem;
-  opacity: 0;
-  transition: opacity 1s;
+  flex: 1 200px;
+  flex-wrap: wrap;
+  margin: 10px;
 }
 
-.display {
-  background-color: #fff;
-  box-shadow: 0 2rem 5rem 1rem rgba(0, 0, 0, 0.1);
-  font-size: 1.8rem;
-  width: 30rem;
-  border-radius: 0.7rem;
-  margin: 0 3rem;
-  /* overflow: hidden; */
+.inpts {
+  margin: 20px;
 }
 
-.song__img {
-  width: 30rem;
-  height: 17rem;
-  object-fit: cover;
-  background-color: #eee;
-  border-top-left-radius: 0.7rem;
-  border-top-right-radius: 0.7rem;
+button {
+  display: flex;
+  padding: 10px;
+  margin: 8px;
+  width: 40%;
+  border: 1px solid black;
+  border-radius: 10px;
+  outline: none;
 }
 
-.song__data {
-  padding: 2.5rem 3.75rem 3rem 3.75rem;
+audio {
+  width: 15rem;
 }
 
-.song__name {
-  font-size: 2.7rem;
-  margin-bottom: 0.7rem;
+input:focus {
+  outline: none;
 }
 
-.artist__name {
-  font-size: 1.4rem;
-  margin-bottom: 2.5rem;
-  text-transform: uppercase;
-  color: #888;
-}
-
-.row span {
-  display: inline-block;
-  margin-right: 2rem;
-  font-size: 2.4rem;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:visited {
-  text-decoration: none;
+.subject_area {
+  position: absolute;
+  top: 300px;
+  left: 20px;
 }

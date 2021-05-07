@@ -1,43 +1,40 @@
 'use strict';
 
-const btn = document.querySelector('.btn-country');
-const countriesContainer = document.querySelector('.countries');
-// const inpValue = document.querySelector('.inp_txt').value;
-// const clck = document.querySelector('.clck-btn');
+const container = document.querySelector('.display-data');
+const clck = document.querySelector('.clck-btn');
 
 ///////////////////////////////////////
 
-const getSong = function (data) {
-  const html = `<article class="display">
-          <img class="song__img" src="${data.results[1].artworkUrl100}" />
-          <div class="song__data">
-            <h3 class="song__name">${data.results[1].trackName}</h3>
-            <h4 class="artist__name">${data.results[1].artistName}</h4>
+const getSongData = function () {
+  let inpValue = document.querySelector('.inp_txt').value;
 
-            <p class="row"><span>🆔 </span>${data.results[1].artistId}</p>
-            <p class="row"><span>💰</span>${data.results[1].collectionPrice} $</p>
-            <p class="row"><span> ⬇</span><a href="${data.results[1].trackViewUrl}">Click For More</a></p>
-          </div>
-          <h4 class="preview"><audio controls>
-  <source src="${data.results[1].previewUrl}" type="audio/mpeg">
-</audio></h4>
-        </article>`;
-
-  countriesContainer.insertAdjacentHTML('beforeend', html);
-  countriesContainer.style.opacity = 1;
-};
-
-// getSong('Rihanna');
-
-const getSongData = function (artistName) {
-  fetch(`https://itunes.apple.com/search?term=${artistName}`)
+  fetch(`https://itunes.apple.com/search?term=${inpValue}`)
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
-      getSong(data);
+      song(data);
     });
 };
 
-getSongData('Queen');
-getSongData('The beatles');
+const song = function (data) {
+  let html = '';
+  data.results.forEach(results => {
+    html += `<article class="display">
+          <img class="song__img" src="${results.artworkUrl100}" />
+          <div class="song__data">
+            <h3 class="song__name">${results.trackName}</h3>
+            <h4 class="artist__name">${results.artistName}</h4>
+            <p class="row"><span>🆔 </span>${results.artistId}</p>
+            <p class="row"><span>💰</span>${results.collectionPrice} $</p>
+            <p class="row"><span> ⬇</span><a href="${results.trackViewUrl}">Click For More</a></p>
+          </div>
+          <h4 class="preview"><audio controls>
+  <source src="${results.previewUrl}" type="audio/mpeg">
+</audio></h4>
+        </article>`;
+  });
+  container.insertAdjacentHTML('beforeend', html);
+};
+
+clck.addEventListener('click', getSongData);
