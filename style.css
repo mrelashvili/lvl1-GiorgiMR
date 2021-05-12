@@ -2,62 +2,167 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Ubuntu';
-  font-weight: 600;
-  font-size: 12px;
 }
 
 body {
-  background-color: #eaeaea;
-
-  display: flex;
-  justify-content: flex-start;
+  background-color: #dddddd;
+  font-family: "Ubuntu";
 }
 
-button:hover {
-  transform: scale(0.9);
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  width: 100%;
+  padding: 0 4rem;
+}
+
+.nav__logo {
+  height: 2.5rem;
+  transition: all 0.3s;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  color: #f6f6f6;
+  font-weight: bold;
+}
+
+.nav__item {
+  margin-left: 4rem;
+  border-radius: 15%;
+  padding: 10px;
+  font-weight: bold;
+  color: #6155a6;
+  text-decoration: underline;
+}
+
+.nav__link:link,
+.nav__link:visited {
+  font-size: 1.3rem;
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.fab {
+  color: #f6f6f6;
+}
+
+.slider {
+  width: 70vw;
+  height: 70vh;
+  margin: 50px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform 1s;
+}
+
+.slider__btn {
+  position: absolute;
+  top: 50%;
+  border: none;
+  color: #333;
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+  font-size: 2.1rem;
   cursor: pointer;
 }
 
-input {
-  display: flex;
-  margin: 8px;
-  padding: 10px;
-  border-radius: 10px;
-  border: none;
+.slider__btn--left {
+  left: 5%;
+  transform: translate(-50%, -50%);
 }
 
-article {
-  display: flex;
-  flex: 1 200px;
-  flex-wrap: wrap;
-  margin: 10px;
+.slider__btn--right {
+  right: 5%;
+  transform: translate(50%, -50%);
 }
 
-.inpts {
-  margin: 20px;
+.img-4 {
+  background-image: url(https://tngwebsolutions.ca/wp-content/uploads/2019/12/web-development-trends-2018-header-1.jpg);
 }
 
-button {
-  display: flex;
-  padding: 10px;
-  margin: 8px;
-  width: 40%;
-  border: 1px solid black;
-  border-radius: 10px;
-  outline: none;
+.img-2 {
+  background-image: url(https://d-line.biz/pictures/articles/articles_thumbnail_zz0HmWebi5.jpg);
 }
 
-audio {
-  width: 15rem;
+.img-3 {
+  background-image: url(https://www.mo.agency/hubfs/So%20you%20want%20to%20be%20a%20web%20developer.png);
 }
 
-input:focus {
-  outline: none;
+.img {
+  background-image: url(https://bs-uploads.toptal.io/blackfish-uploads/blog/post/seo/og_image_file/og_image/21512/0522-CSSJavascriptSlider-Luke_Social-8a1d6e362269f0c827e6d5e456dd86ce.png);
 }
 
-.subject_area {
+.img,
+.img-2,
+.img-3,
+.img-4 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Modals */
+
+.modal {
   position: absolute;
-  top: 300px;
-  left: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  background-color: #a685e2;
+  color: white;
+  padding: 5rem;
+  border-radius: 15px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  background-color: #a685e2;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  font-family: "Ubuntu";
+}
+
+.close-modal h1 {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 5;
 }

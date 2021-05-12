@@ -5,16 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
     <script defer src="script.js"></script>
-    <title>Asynchronous JavaScript</title>
+    <title>Components</title>
   </head>
   <body>
-    <form action="#">
-      <input class="inp_txt" type="text" />
-      <button class="clck-btn">Click</button>
-    </form>
-    <main class="container">
-      <div class="display-data"></div>
-    </main>
+    <nav class="nav">
+      <a class="navbar-brand" href="#">
+        <i class="fab fa-angrycreative fa-5x nav__logo"></i
+      ></a
+        <ul class="nav__links">
+          <li class="nav__item">
+            <a class="nav__link" href="#">Modal</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Modal 2</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Modal 3</a>
+          </li>
+        </ul>
+    </nav>
+    <div class="slider">
+      <div class="slide img"></div>
+      <div class="slide img-2"></div>
+      <div class="slide img-3"></div>
+      <div class="slide img-4"></div>
+      <button class="slider__btn slider__btn--left">&larr;</button>
+      <button class="slider__btn slider__btn--right">&rarr;</button>
+    </div>
+
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <h1>Modal Window</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </p>
+    </div>
+    <div class="overlay hidden"></div>
   </body>
 </html>
