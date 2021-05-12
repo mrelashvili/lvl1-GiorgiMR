@@ -40,6 +40,7 @@ btnRight.addEventListener("click", nextSlide);
 btnLeft.addEventListener("click", prevSlide);
 
 ////MODALS.
+//
 
 const modal = document.querySelector(".modal");
 const btnShowModal = document.querySelectorAll(".nav__link");
