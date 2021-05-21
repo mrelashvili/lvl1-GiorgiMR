@@ -131,8 +131,9 @@ section .jumbotron {
   margin-top: 20px;
 }
 
-.wid_ {
+.wid_p {
   width: 60%;
+  margin: auto;
 }
 .thr-img p {
   width: 70%;
