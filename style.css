@@ -39,6 +39,14 @@ span {
 
 /* //////////////   */
 
+.fa-phone-alt {
+  color: #ff4c3b;
+}
+
+.text-secondary {
+  background-color: #f8f8f8;
+}
+
 .form-inline input {
   padding: 7px;
 }
@@ -47,24 +55,6 @@ span {
 }
 .form-inline input:active {
   border-style: none;
-}
-.mod-img,
-.info {
-  display: flex;
-  justify-content: space-around;
-}
-.info {
-  padding: 10px;
-  background-color: #f8f8f8;
-}
-.inside {
-  display: flex;
-}
-.inside i {
-  margin-right: 20px;
-}
-.inside > div {
-  margin-right: 20px;
 }
 .icon i {
   color: #ff4c3b;
@@ -105,15 +95,22 @@ span {
 
 /* //////////////   */
 
-.vl {
-  border-left: 1px solid grey;
-  height: 30px;
+.form-inline input {
+  padding: 10px;
 }
 
-.imgs .row .col-2 {
-  display: flex;
-  flex-wrap: wrap;
-  flex: 1 1 200px;
+.form-inline button {
+  background-color: #ff4c3b;
+  color: white;
+  padding: 10px;
+}
+
+.vl {
+  border-right: 1px solid grey;
+  height: 100px;
+}
+
+.imgs .row div {
   max-width: 100%;
   height: 150px;
   background-repeat: no-repeat;
@@ -132,6 +129,10 @@ section .jumbotron {
 
 .thr-img {
   margin-top: 20px;
+}
+
+.wid_ {
+  width: 60%;
 }
 .thr-img p {
   width: 70%;
@@ -159,18 +160,13 @@ section .jumbotron {
   transition: transform 1s;
 }
 
-.sections {
-  padding: 30px;
-}
-
 .men-section,
 .women-section {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 50%;
+  margin: 15px;
   height: 250px;
-  margin: 10px;
 }
 
 .men-section {
@@ -202,7 +198,6 @@ section .jumbotron {
   right: 5%;
   transform: translate(50%, -50%);
 }
-
 .img-4 {
   background-image: url(https://assets.vogue.com/photos/5f60fd318bf8cfd653392684/master/w_2560%2Cc_limit/02-paris-street-style-phil-oh-day-5.jpg);
 }
