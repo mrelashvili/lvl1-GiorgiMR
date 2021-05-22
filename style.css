@@ -3,21 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-.burger-menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 30%;
-  height: 100vh;
-  background-color: black;
-  color: white;
-  transform: (translateX(-100%));
-}
-.showNav {
-  transform: translateX(0);
-}
 
 body {
   background-color: #dddddd;
@@ -25,21 +10,11 @@ body {
   overflow-x: hidden;
 }
 
-footer {
-  display: flex;
-  justify-content: space-evenly;
-  padding: 30px;
-  border-bottom: 1px solid gray;
-  background-color: #f9f9f9;
-}
-
-span {
-  color: red;
-}
-
 /* //////////////   */
 
-.fa-phone-alt {
+.fa-phone-alt,
+.icon i,
+.card-body i {
   color: #ff4c3b;
 }
 
@@ -47,18 +22,6 @@ span {
   background-color: #f8f8f8;
 }
 
-.form-inline input {
-  padding: 7px;
-}
-.form-inline input:focus {
-  border: none;
-}
-.form-inline input:active {
-  border-style: none;
-}
-.icon i {
-  color: #ff4c3b;
-}
 .latest-one__paragraph,
 .lists {
   margin: 30px 0;
@@ -67,10 +30,6 @@ span {
   color: #77777b;
 }
 
-.brg-men {
-  padding: 10px;
-  cursor: pointer;
-}
 .bar {
   width: 30px;
   height: 3px;
@@ -82,27 +41,16 @@ span {
   outline: none;
 }
 
-.latest-one {
-  padding: 50px;
-}
 .footer-icons {
   display: flex;
   justify-content: space-between;
 }
-.card-body {
-  margin: 15px;
-}
 
 /* //////////////   */
 
-.form-inline input {
-  padding: 10px;
-}
-
 .form-inline button {
   background-color: #ff4c3b;
-  color: white;
-  padding: 10px;
+  color: #fff;
 }
 
 .vl {
@@ -119,24 +67,9 @@ span {
   background-image: url(https://assets.vogue.com/photos/5f5fac8b7d9362f52d645560/16:9/w_1280,c_limit/social-holding.jpg);
 }
 
-section .jumbotron {
-  padding: 30px;
-}
-
-.card p {
-  margin-top: 5px;
-}
-
-.thr-img {
-  margin-top: 20px;
-}
-
-.wid_p {
-  width: 60%;
-  margin: auto;
-}
+.wid_p,
 .thr-img p {
-  width: 70%;
+  width: 60%;
   margin: auto;
 }
 
@@ -153,11 +86,9 @@ section .jumbotron {
   top: 0;
   width: 100%;
   height: 50rem;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   transition: transform 1s;
 }
 
@@ -221,7 +152,6 @@ section .jumbotron {
 .img-4 {
   background-repeat: no-repeat;
   background-size: cover;
-
   width: 100%;
   height: 100%;
 }
@@ -230,57 +160,4 @@ section .jumbotron {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.card-body i {
-  margin-right: 10px;
-  color: #ff4c3b;
-}
-
-.ham {
-  position: fixed;
-  /* keep the hamburger button above everything */
-  z-index: 100;
-  top: 1rem;
-  right: 1rem;
-  width: 3rem;
-  height: 3rem;
-  border: black solid 1px;
-  background: white;
-  cursor: pointer;
-}
-
-.xIcon {
-  display: none;
-}
-
-.menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100vh;
-  background: black;
-  color: white;
-  transform: translateX(-100%);
-  transition: transform 0.2s;
-  list-style: none;
-  padding-top: 4rem;
-}
-
-.showMenu {
-  transform: translateX(0);
-}
-
-li {
-  padding: 1rem 0;
-}
-
-.menuLink {
-  display: inline;
-  font-size: 2rem;
-  color: white;
-  text-decoration: none;
 }
