@@ -1,0 +1,169 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "config";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $background-color;
+  font-family: "Ubuntu";
+  overflow-x: hidden;
+}
+
+/* //////////////   */
+
+.imgs {
+  .row {
+    div {
+      max-width: 100%;
+      height: 150px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-image: url(https://assets.vogue.com/photos/5f5fac8b7d9362f52d645560/16:9/w_1280,c_limit/social-holding.jpg);
+    }
+  }
+}
+
+////SLIDER!
+
+.slider {
+  display: flex;
+  width: 100vw;
+  height: 80vh;
+  position: relative;
+  overflow-x: hidden;
+  .img-4 {
+    background-image: url(https://assets.vogue.com/photos/5f60fd318bf8cfd653392684/master/w_2560%2Cc_limit/02-paris-street-style-phil-oh-day-5.jpg);
+  }
+
+  .img-2 {
+    background-image: url(https://media.vogue.co.uk/photos/5fd8cfe1fd34bd57d1413164/3:2/w_3000,h_2000,c_limit/042-Adesuwa%20Aighewi%20by%20STYLEDUMONDE%20Street%20Style%20Fashion%20Photography_95A0861FullRes.jpg);
+  }
+
+  .img-3 {
+    background-image: url(https://assets.vogue.com/photos/5c12e3fae616f60d7ddc2380/master/w_3000,h_2000,c_limit/Cajsa-Wessberg-Stockholm-FW-SS19-day-1-by-STYLEDUMONDE-Street-Style-Fashion-Photography20180828_48A6089FullRes.jpg);
+  }
+
+  .img {
+    background-image: url(https://static.onecms.io/wp-content/uploads/sites/14/2020/07/15/fashion-header-1-2000.jpg);
+  }
+  .img,
+  .img-2,
+  .img-3,
+  .img-4 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+  &__btn {
+    position: absolute;
+    top: 50%;
+    border: none;
+    color: #333;
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    font-size: 2.1rem;
+    cursor: pointer;
+  }
+  &__btn--left {
+    left: 5%;
+    transform: translate(-50%, -50%);
+  }
+  &__btn--right {
+    right: 5%;
+    transform: translate(50%, -50%);
+  }
+  .slide {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 50rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 1s;
+  }
+}
+
+.men-section,
+.women-section {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 15px;
+  height: 250px;
+}
+
+.men-section {
+  background-image: url(https://cdn.luxe.digital/media/2019/12/16162226/best-men-online-shopping-mr-porter-luxe-digital.jpg);
+}
+
+.women-section {
+  background-image: url(https://www.toptrendsguide.com/wp-content/uploads/2020/02/Online-Shopping-Websites.jpg);
+}
+
+.card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wid_p,
+.thr-img p {
+  width: 60%;
+  margin: auto;
+}
+
+.form-inline input:focus {
+  outline: none;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* //////////////   */
+
+.form-inline {
+  button {
+    background-color: $background-color;
+    color: #fff;
+  }
+}
+
+.vl {
+  border-right: 1px solid grey;
+  height: 100px;
+}
+
+.fa-phone-alt,
+.icon i,
+.card-body i {
+  color: $orng-color;
+}
+
+.text-secondary {
+  background-color: #f8f8f8;
+}
+
+.latest-one__paragraph,
+.lists {
+  margin: 30px 0;
+  font-size: 13px;
+  line-height: 30px;
+  color: $par-color;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: $bar-color;
+  margin: 6px 0;
+}
