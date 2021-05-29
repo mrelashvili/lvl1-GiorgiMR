@@ -1,0 +1,258 @@
+@use "../node_modules/bootstrap/scss/bootstrap.scss";
+
+$fa-font-path: "../node_modules/font-awesome/fonts";
+@use "../node_modules/font-awesome/scss/font-awesome.scss";
+
+@mixin color-table {
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  border: 1px solid #000;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem;
+  overflow-x: hidden;
+}
+
+$header__top-color: #f8f8f8;
+$header__icon-color: #ff4c3b;
+$white__color: #fff;
+.header {
+  background-color: $header__top-color;
+  .fa-phone-alt {
+    color: $header__icon-color;
+  }
+  &__bottom {
+    background-color: $white__color;
+    display: flex;
+    font-size: 1.6rem;
+    &--icon {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
+
+footer {
+  background-color: $header__top-color;
+}
+.last-part {
+  background-color: $header__top-color;
+}
+
+.footer {
+  font-size: 1.6rem;
+  &-icons {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 1.7rem;
+  }
+}
+.latest-one__paragraph {
+  line-height: 1.9;
+  font-size: 1.6rem;
+}
+
+.form-inline {
+  .input-field:focus {
+    outline: none;
+  }
+}
+.vl {
+  border-bottom: 1px solid #dddddd;
+}
+.btn {
+  background-color: $header__icon-color;
+  border-radius: 8px;
+  padding: 1.4rem 2.5rem;
+  color: #fff;
+  font-size: 1.3rem;
+}
+.nav-link {
+  margin: 0 9px;
+}
+.main__section--top {
+  display: flex;
+  justify-content: space-between;
+  background-color: $header__top-color;
+  flex-wrap: wrap;
+  flex: 1 1 500px;
+}
+
+main {
+  display: flex;
+}
+
+.main__sect {
+  display: flex;
+}
+.aside {
+  font-size: 1.8rem;
+  width: 30rem;
+  // height: 80vh;
+  background-color: $header__top-color;
+  margin: 8rem 5rem 1rem;
+
+  .head {
+    padding: 2rem;
+  }
+  .boxes {
+    .col {
+      display: flex;
+      position: relative;
+      margin: 0 -2rem;
+      .col-1 {
+        @include color-table();
+        background-color: #fff;
+      }
+      .col-2 {
+        @include color-table();
+        background-color: grey;
+      }
+      .col-3 {
+        @include color-table();
+        background-color: red;
+      }
+      .col-4 {
+        @include color-table();
+        background-color: #800080;
+      }
+      .col-5 {
+        @include color-table();
+        background-color: blue;
+      }
+      .col-6 {
+        @include color-table();
+        background-color: yellow;
+        position: absolute;
+        left: 2rem;
+        top: 4rem;
+      }
+      .col-7 {
+        @include color-table();
+        background-color: green;
+        position: absolute;
+        left: 6rem;
+        top: 4rem;
+      }
+
+      li {
+        list-style: none;
+        margin: 0 5px;
+        cursor: pointer;
+      }
+    }
+    div {
+      padding: 1rem 0;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: #777977;
+      label {
+        cursor: pointer;
+      }
+    }
+    padding: 2rem;
+  }
+}
+.product {
+  width: 30rem;
+  background-color: #fff;
+  // margin: 0 5rem 5rem;
+  &__head {
+    border-bottom: 2px solid $header__top-color;
+  }
+  &__img {
+    width: 10rem;
+    height: 12rem;
+    background-image: url("https://themes.pixelstrap.com/multikart/assets/images/fashion/pro/1.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  &__section {
+    display: flex;
+    align-items: center;
+    margin: 3rem 0;
+    div {
+      i {
+        color: #ffa200;
+      }
+    }
+  }
+}
+
+.main__container {
+  margin: 8rem 2rem 5rem;
+  width: 100vw;
+  &--top {
+    &-img {
+      background-image: url("https://themes.pixelstrap.com/multikart/assets/images/mega-menu/2.jpg");
+      background-position: left;
+      background-size: cover;
+      height: 22rem;
+      width: 100%;
+    }
+    &-p {
+      font-size: 1.6rem;
+      color: #777777;
+    }
+  }
+  table {
+    text-align: center;
+    border: 1px solid black;
+    width: 100%;
+  }
+
+  &--bottom {
+    flex-wrap: wrap;
+  }
+}
+
+.bottom_part {
+  display: flex;
+}
+.pro-col {
+  @include color-table();
+}
+
+td {
+  border: 1px solid black;
+  padding: 2rem;
+}
+
+.company-logo {
+  width: 30rem;
+  height: 40rem;
+  margin-top: 5rem;
+  background-image: url("https://themes.pixelstrap.com/multikart/assets/images/side-banner.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.image-card {
+  height: 100%;
+}
+
+.bar {
+  height: 1.8rem;
+  width: 7px;
+  background-color: red;
+}
+
+.quantity {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}

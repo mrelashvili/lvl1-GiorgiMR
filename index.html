@@ -2,15 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="dist/css/main.css" />
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
-      rel="stylesheet"
-    />
     <!-- Font awesome -->
     <link
       rel="stylesheet"
@@ -19,326 +12,502 @@
       crossorigin="anonymous"
     />
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+    <!-- Bootstrap scripts -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
       crossorigin="anonymous"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
-
-    <script defer src="script.js"></script>
-    <title>Bootstrap Markup</title>
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+      integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
   </head>
   <body>
-    <div class='container-fluid px-5 py-2 text-secondary'>
-    <div class="row">
-        <div class='col-lg-3 col-md-4 col-sm-4'>
-        <p>Welcome to Our store Multikart</p>
-        </div>
-<div class='col-lg-3 col-md-3 col-sm-3'>
-          <p><i class="fas fa-phone-alt"></i>
- Call Us: 123-456-7        890</p>
-        </div>
+    <header class="header p-2">
+      <div class="header__top">
+        <div class="container-fluid px-5 py-2 text-secondary">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3">
+              <p>Welcome to Our store Multikart</p>
+            </div>
+            <div class="col-lg-7 col-md-6 col-sm-5">
+              <p><i class="fas fa-phone-alt"></i> Call Us: 123-456-7 890</p>
+            </div>
 
-      <div class='col-lg-6 col-md-5 col-sm-5 text-center'>
-          <i class="fas fa-heart fa-sm"></i>
-          <i class="fas fa-user fa-xs ms-4"> My Account</i>
+            <div class="col-lg-2 col-md-3 col-sm-4">
+              <div class="header__account">
+                <i class="fas fa-heart fa-sm"></i>
+                <i class="fas fa-user fa-xs ms-5"></i>
+                <span class="ms-5">My Account</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </header>
+    <div class="header__bottom p-5">
+      <div class="header__bottom--logo col-lg-4">
+        <a class="navbar-brand col-5" href="#">
+          <img
+            src="https://themes.pixelstrap.com/multikart/assets/images/icon/logo.png"
+            alt="logo"
+          />
+        </a>
       </div>
-      </div>
-    <header>
-      
-      <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <div class="brg-men">
-  <div class="bar"></div>
-  <div class="bar"></div>
-  <div class="bar"></div>
-</div>
-
-        <div class="container">
-           
-          <a class="navbar-brand col-5" href="#">
-            <img
-              src="http://themes.pixelstrap.com/multikart/assets/images/icon/logo.png"
-              alt=""
-            />
-          </a>
+      <div class="header__bottom--nav col-lg-8">
+        <nav class="navbar navbar-expand-lg navbar-light col-lg-5">
           <button
             class="navbar-toggler"
             type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
+            data-toggle="collapse"
+            data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon text-danger"></span>
+            <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  id="navbarScrollingDropdown"
-                  href="#"
-                  >FEATURE</a
-                >
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  id="navbarScrollingDropdown"
-                  href="#"
-                  >SHOP</a
-                >
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  id="navbarScrollingDropdown"
-                  href="#"
-                  >PRODUCT</a
-                >
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  id="navbarScrollingDropdown"
-                  href="#"
-                  >PAGES</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">BLOG</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fas fa-search"></i> </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fas fa-cog"></i> </a>
-              </li>
-              <li class="nav-item">
+              <li class="nav-item active">
                 <a class="nav-link" href="#"
-                  ><i class="fas fa-shopping-cart"></i>
-                </a>
+                  >HOME <span class="sr-only">(current)</span></a
+                >
               </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdownMenuLink"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  FEATURE
+                </a>
+                <div
+                  class="dropdown-menu"
+                  aria-labelledby="navbarDropdownMenuLink"
+                >
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdownMenuLink"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  SHOP
+                </a>
+                <div
+                  class="dropdown-menu"
+                  aria-labelledby="navbarDropdownMenuLink"
+                >
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdownMenuLink"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  PRODUCT
+                </a>
+                <div
+                  class="dropdown-menu"
+                  aria-labelledby="navbarDropdownMenuLink"
+                >
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdownMenuLink"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  PAGES
+                </a>
+                <div
+                  class="dropdown-menu"
+                  aria-labelledby="navbarDropdownMenuLink"
+                >
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdownMenuLink"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  BLOG
+                </a>
+                <div
+                  class="dropdown-menu"
+                  aria-labelledby="navbarDropdownMenuLink"
+                >
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <div class="header__bottom--icon col-lg-3">
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="fas fa-search"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fas fa-cog"></i> </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="fas fa-shopping-cart"></i>
+                  </a>
+                </li>
+              </div>
             </ul>
           </div>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <!-- SLIDER -->
-      <div class="slider">
-        <div class="slide img"></div>
-        <div class="slide img-2"></div>
-        <div class="slide img-3"></div>
-        <div class="slide img-4"></div>
-        <button class="slider__btn slider__btn--left">&larr;</button>
-        <button class="slider__btn slider__btn--right">&rarr;</button>
+        </nav>
       </div>
-
-      <!-- 50-50 col images -->
-    
-
-     
-        <div class="row p-5 ">
-          <div class="card col-lg-5 col-md-5 col-sm-12 m-auto men-section"></div>
-          <div class="col-lg-5 col-md-5 col-sm-12 m-auto women-section"></div>
-        </div>
-        
-  
-        <!-- ///content message -->
-        <div class='jumbotron text-center'>
-          <div class='container'>
-          <p><span>Special Offer</span></p>
-        <h2>LATE<u>ST DR</u>OPS</h2>
-        <p class='wid_p p-4'>Looking for the latest trends in clothing, shoes and accessories? Welcome to our 'Latest Drops' edit, bringing you all the latest styles from all your fave brands.</p>
+    </div>
+    <div class="main__section--top p-5">
+      <h3>COLLECTION</h3>
+      <h3>HOME / COLLECTION</h3>
+    </div>
+    <main>
+      <aside class="aside">
+          <div class="head">
+            <h2>BRAND</h2>
+          </div>
+          <div class="boxes">
+            <div>
+              <input
+                type="checkbox"
+                id="product-one"
+                name="product-one"
+                value="Zara"
+              />
+              <label for="product-one"> ZARA</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="product-sec"
+                name="product-sec"
+                value="Vera"
+              />
+              <label for="product-sec"> VERA-MODA</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="product-thrd"
+                name="product-thrd"
+                value="forever"
+              />
+              <label for="product-thrd"> FOREVER-21</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="product-four"
+                name="product-four"
+                value="roadster"
+              />
+              <label for="product-four"> ROADSTER</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="product-five"
+                name="product-five"
+                value="only"
+              />
+              <label for="product-five"> ONLY</label>
+            </div>
           </div>
         </div>
-
-
-        <!-- ///imges -->
-          <div class='row'>
+        <div>
+          <div class="head colours"><h2>COLORS</h2></div>
+          <div class="boxes">
+            <ul class="col">
+              <li class="col-1"></li>
+              <li class="col-2"></li>
+              <li class="col-3"></li>
+              <li class="col-4"></li>
+              <li class="col-5"></li>
+              <li class="col-6"></li>
+              <li class="col-7"></li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="head">
+            <h3 class="mt-5">SIZE</h3>
+          </div>
+          <div class="boxes">
+            <div>
+              <input type="checkbox" id="product-s" name="s" value="s" />
+              <label for="product-s"> S</label>
+            </div>
+            <div>
+              <input type="checkbox" id="product-m" name="m" value="m" />
+              <label for="product-m"> M</label>
+            </div>
+            <div>
+              <input type="checkbox" id="product-l" name="l" value="l" />
+              <label for="product-l"> L</label>
+            </div>
+            <div>
+              <input type="checkbox" id="product-xl" name="xl" value="xl" />
+              <label for="product-xl"> XL</label>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="head">PRICE</div>
+          <div class="boxes">
+            <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+              <input type="range" id="b" name="b" value="50" />
+            </form>
+          </div>
+        </div>
+      <section class="product">
+        <div class="head">
+          <h2 class="product__head">NEW PRODUCT</h2>
+        </div>
+        <div class="product__section">
+          <div class="product__img"></div>
+          <div class="product__star ms-5">
+            <div>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <div class="product__descr">
+              <p>Slim Fit Cotton Shirt</p>
+            </div>
+            <div class="product__price">
+              <h2>$500.00</h2>
+            </div>
+          </div>
+        </div>
+        <div class="product__section">
+          <div class="product__img"></div>
+          <div class="product__star ms-5">
+            <div>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <div class="product__descr">
+              <p>Slim Fit Cotton Shirt</p>
+            </div>
+            <div class="product__price">
+              <h2>$500.00</h2>
+            </div>
+          </div>
+        </div>
+        <div class="product__section">
+          <div class="product__img"></div>
+          <div class="product__star ms-5">
+            <div>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <div class="product__descr">
+              <p>Slim Fit Cotton Shirt</p>
+            </div>
+            <div class="product__price">
+              <h2>$500.00</h2>
+            </div>
+          </div>
+        </div>
+        <div class="company-logo"></div>
+      </section>
+    </aside>
+    <div class="main__container">
+      <div class='main__container--top'>
+        <div class='main__container--top-img'></div>
+        <div class='main__container--top-p py-5'>
+          <h2>BIGGEST DEALS ON TOP BRANDS</h2>
+          <p class='mt-4'>The trick to choosing the best wear for yourself is to keep in mind your body type, individual style, occasion and also the time of day or weather. In addition to eye-catching products from top brands, we also offer an easy 30-day return and exchange policy, free and fast shipping across all pin codes, cash or card on delivery option, deals and discounts, among other perks. So, sign up now and shop for westarn wear to your heart’s content on Multikart.</p>
+        </div>
+      </div>
+       <table class='main__container--middle'>
+  <tbody>
+    <tr >
+      <td colspan='3'>Showing Products 1-24 Of 10 Result</td>
+    </tr>
+    <tr>
+      <td class='d-flex quantity'>
+        <div class='vertical-line-two d-flex '>
+          <div class='bar'></div>
+          <div class='bar ms-1'></div>
+        </div>
+        <div class='vertical-line-three d-flex '>
+          <div class='bar ms-3'></div>
+          <div class='bar ms-1'></div>
+          <div class='bar ms-1'></div>
+        </div>
+        <div class='vertical-line-four d-flex '>
+          <div class='bar ms-3'></div>
+          <div class='bar ms-1'></div>
+          <div class='bar ms-1'></div>
+          <div class='bar ms-1'></div>
+        </div>
+      </td>
+      <td>24 Products Par Page</td>
+      <td>Sorting items</td>
+    </tr>
+  </tbody>
+</table>
+    
+      <div class='main__container--bottom my-5 d-flex'>
+          <!-- <div class='row'>
         <div class="col-lg-3 col-md-6 col-sm-6" >
   <img class="card-img-top" src="https://www.apetogentleman.com/wp-content/uploads/2018/06/male-models-david-gandy.jpg" alt="Card image cap">
  
-    <p class="text-center p-3">Some quick example</p>
-</div>
-     <div class="col-lg-3 col-md-6 col-sm-6" >
-  <img class="card-img-top" src="https://www.apetogentleman.com/wp-content/uploads/2018/06/male-models-david-gandy.jpg" alt="Card image cap">
- 
-    <p class="text-center p-3">Some quick example</p>
-</div>
-     <div class="col-lg-3 col-md-6 col-sm-6" >
-  <img class="card-img-top" src="https://www.apetogentleman.com/wp-content/uploads/2018/06/male-models-david-gandy.jpg" alt="Card image cap">
-  
-    <p class="text-center p-3">Some quick example </p>
-  
-  </div>
-
-     <div class="col-lg-3 col-md-6 col-sm-6" >
-  <img class="card-img-top" src="https://www.apetogentleman.com/wp-content/uploads/2018/06/male-models-david-gandy.jpg" alt="Card image cap">
-    <p class="text-center p-3">Some quick example </p>
-  </div>
-</div>
+    <div>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <div class="product__descr">
+              <p>Slim Fit Cotton Shirt</p>
+            </div>
+            <div class="product__price">
+              <h2>$500.00</h2>
+            </div>
+            </div> -->
+            <!-- <div class="bottom_part">
+              <div class='pro_col'></div>
+              <div class='pro_col col-3'></div>
+              <div class='pro_col col-4'></div>
+            </div> -->
+    
+      </div>
+    </div>
     </main>
+    <footer class="container-fluid p-5 vl">
+      <div class="row">
+        <div class="col-lg-7 col-md-3 col-sm-6">
+          <h2>KNOW IT ALL FIRST!</h2>
 
-    <!-- CARDS -->
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-  <div class="col">
-    <div class="card h-100">
-      <div class="card-body m-3">
-        <div>
-         <i class="fas fa-truck fa-3x m-3"></i>
-         </div>
-         <div>
-        <h5 class="card-title">Free Shipping</h5>
-        <p class="card-text">Free Shipping World Wide</p>
+          <p class="my-2">
+            Never Miss Anything From Multikart By Signing Up To Our Newsletter.
+          </p>
+          <p></p>
         </div>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <div class="card-body">
-        <div>
-       <i class="fas fa-business-time fa-3x m-3"></i>
-        </div>
-        <div>
-        <h5 class="card-title">24 X 7 Service</h5>
-        <p class="card-text">Online Service For New Customer</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <div class="card-body">
-        <div>
-           <i class="fas fa-truck fa-3x m-3"></i>
-        </div>
-        <div>
-        <h5 class="card-title">Festival Offer</h5>
-        <p class="card-text">New Online Special Festival Offer</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
-<div class='container mod-img thr-img p-4'></div>
-  <div class='row mx-3'>
-        <div class="col-lg-4 col-md-4 col-sm-6">
-  <img class="card-img-top" src="https://www.apetogentleman.com/wp-content/uploads/2018/06/male-models-david-gandy.jpg" alt="Card image cap">
- 
-    <p class="text-center mt-3">25 January 2021</p>
-    <p class='text-center'>London Fashion & Hair From <u>Fashion</u> Week</p>
-</div>
-     <div class="col-lg-4 col-md-4 col-sm-6" >
-  <img class="card-img-top" src="https://www.apetogentleman.com/wp-content/uploads/2018/06/male-models-david-gandy.jpg" alt="Card image cap">
-     <p class="text-center mt-3">25 January 2021</p>
-    <p class='text-center'>London Fashion & Hair Trends From <u>Fashion</u>  Week</p>
-</div>
-     <div class="col-lg-4 col-md-4 col-sm-12" >
-  <img class="card-img-top" src="https://www.apetogentleman.com/wp-content/uploads/2018/06/male-models-david-gandy.jpg" alt="Card image cap">
-     <p class="text-center mt-3">25 January 2021</p>
-    <p class='text-center'>London Fashion & Hair Trends From <u>Fashion</u>  Week</p>
-  </div>
-  </div>
-</div>
-
-<section>
-   <div class='jumbotron text-center p-5'>
-          <div class='container'>
-          <h1>#WHOWEARWHAT</h1>
+        <form class="form-inline col-lg-5 col-md-6 col-sm-6">
+          <input
+            class="input-field border border-dark p-3"
+            placeholder="Enter Your Email"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button type="button" class="btn ms-4">SUBSCRIBE</button>
+        </form>
+      </div>
+    </footer>
+    <div class="container-fluid last-part p-5">
+      <div class="row">
+        <div class="col-md-4 col-sm-12">
+          <div>
+            <a href="#">
+              <img
+                class="py-5"
+                src="http://themes.pixelstrap.com/multikart/assets/images/icon/logo.png"
+                alt=""
+              />
+            </a>
           </div>
-    </div>
-
-    <div class=' imgs'>
-      <div class='row'>
-        <div class=' col-lg-2 col-md-3 col-sm-6'></div>
-      <div class=' col-lg-2 col-md-3 col-sm-6'></div>
-      <div class=' col-lg-2 col-md-3 col-sm-6'></div>
-      <div class=' col-lg-2 col-md-3 col-sm-6'></div>
-      <div class=' col-lg-2 col-md-6 col-sm-6'></div>
-      <div class='col-lg-2 col-md-6 col-sm-6'></div>
-      </div>
-    </div>
-</section>
-
-<footer class='container p-2 m-4 '>
-  <div class='row'>
-  <div class='col-lg-7 col-md-3 col-sm-6 vl'> 
-  <a>KNOW IT ALL FIRST!</a>
-  
-  <p class='my-2'>Never Miss Anything From Multikart By Signing Up To Our Newsletter.<p>
-    </div>   
-      <form class="form-inline col-lg-5 col-md-6 col-sm-6">
-        <input class="border border-dark p-2" placeholder="Enter Your Email" type="search" placeholder="Search" aria-label="Search">
-        <button type="button" class="btn ms-4 p-2">SUBSCRIBE</button>
-      </form>
-      </div>
-  </footer>
-  <div class='container latest-one'>
-    <div class='row'>
-      <div class='col-md-4'>
-        <div>
-        <a href="#">
-            <img
-              src="http://themes.pixelstrap.com/multikart/assets/images/icon/logo.png"
-              alt=""
-            />
-          </a>
+          <div class="latest-one__paragraph">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam,
+            </p>
           </div>
-          <div class='latest-one__paragraph'>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
-          </div>
-          <div class='footer-icons'>
+          <div class="footer-icons">
             <i class="fab fa-facebook-f"></i>
             <i class="fab fa-google"></i>
             <i class="fab fa-twitter"></i>
             <i class="fab fa-instagram"></i>
             <i class="fas fa-wifi"></i>
           </div>
-      </div>
-      <div class='col-md-3'>
-        <div class='head'><h6>MY ACCOUNT</h6></div>
-        <div class='lists'>
-          <p >Men</p>
-          <p >Women</p>
-          <p>Clothing</p>
-          <p >Accessories</p>
-          <p>Featured</p>
         </div>
-      </div>
-      <div class='col-md-3'>
-        <div class='head'><h6>WHY WE CHOOSE</h6></div>
-         <div class='lists'>
-          <p >Men</p>
-          <p >Women</p>
-          <p>Clothing</p>
-          <p >Accessories</p>
-          <p>Featured</p>
+        <div class="col-md-3 col-sm-12">
+          <div class="head p-5"><h4>MY ACCOUNT</h4></div>
+          <div class="lists">
+            <p>Men</p>
+            <p>Women</p>
+            <p>Clothing</p>
+            <p>Accessories</p>
+            <p>Featured</p>
+          </div>
         </div>
-      </div>
-      <div class='col-md-2'>
-        <div class='head'><h6>STORE INFORMATION</h6></div>
-         <div class='lists'>
-          <p >Men</p>
-          <p >Women</p>
-          <p>Clothing</p>
-          <p >Accessories</p>
-          <p>Featured</p>
+        <div class="col-md-3 col-sm-12">
+          <div class="head p-5"><h4>WHY WE CHOOSE</h4></div>
+          <div class="lists">
+            <p>Men</p>
+            <p>Women</p>
+            <p>Clothing</p>
+            <p>Accessories</p>
+            <p>Featured</p>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-12">
+          <div class="head p-5"><h4>STORE INFORMATION</h4></div>
+          <div class="lists">
+            <p>Men</p>
+            <p>Women</p>
+            <p>Clothing</p>
+            <p>Accessories</p>
+            <p>Featured</p>
+          </div>
         </div>
       </div>
     </div>
-    </div>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
